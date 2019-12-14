@@ -1,0 +1,143 @@
+.headingPrimary{
+    color:$color_white;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    
+}
+
+
+.headingPrimaryMain{
+    display:block;
+    font-size: 4rem;
+    letter-spacing: 2.7rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    @include respond(sL)
+    {
+        font-size: 3.5rem;
+    }
+    @include respond(land)
+    {
+        font-size: 3rem;
+    }
+    @include respond(port)
+    {
+        font-size: 2.5rem;
+    }
+    
+}
+.headingPrimarySub{
+    display:block;
+    font-size: 2rem;
+    letter-spacing: 2.1rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    @include respond(sL)
+    {
+        font-size: 2rem;
+    }
+    @include respond(land)
+    {
+        font-size: 1.8rem;
+    }
+    @include respond(port)
+    {
+        font-size: 1.5rem;
+    }
+        
+    
+}
+
+.headingSecondary{
+    font-size: 3rem;
+    display:inline-block;
+    background-image: linear-gradient(to right,rgba($color_blue-light,1),rgba($color-blue-dark,1));
+    -webkit-background-clip: text;
+    letter-spacing: 3px;;
+    color:transparent;
+    text-transform: uppercase;
+    @include respond(port)
+    {
+        font-size: 2.5rem;
+    }
+    
+}
+.heading-tertiary{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:darken($color_grey,30%);
+    text-transform: uppercase;
+    
+
+}
+.paragraph{
+    font-size: 1.5rem;
+    color:darken($color_grey,15%);
+    &:not(:last-child)
+    {
+        margin-bottom: 2rem;
+    }
+    
+    
+}
+
+.fourthHeading-1{
+
+    display: inline-block;
+    color:$color_white;
+    text-transform: uppercase;;
+    background-image: linear-gradient(to right bottom,rgba($color_blue-light,1),rgba($color-blue-dark,1));
+    position: absolute;
+    top:12rem;
+    right:2rem;
+    font-weight: 400;
+    width: 50%; 
+    padding :0  1rem;
+    font-size: 2rem;
+    -webkit-box-decoration-break:clone;
+    @include respond(sL)
+    {
+        font-size: 1.5rem;
+    }
+}
+
+.fourthHeading-2{
+
+    display: inline-block;
+    color:$color_white;
+    text-transform: uppercase;;
+    background-image: linear-gradient(to right bottom,rgba($color_orange-light,1),rgba($color-orange-dark,1));
+    position: absolute;
+    top:12rem;
+    right:2rem;
+    font-weight: 400;
+    width: 50%; 
+    padding :0  1rem;
+    font-size: 2rem;
+    -webkit-box-decoration-break:clone;
+    @include respond(sL)
+    {
+        font-size: 1.5rem;
+    }
+}
+.fourthHeading-3{
+
+    display: inline-block;
+    color:$color_white;
+    text-transform: uppercase;;
+    background-image: linear-gradient(to right bottom,rgba($color_green,1),rgba($color-green-dark,1));
+    position: absolute;
+    top:12rem;
+    right:2rem;
+    font-weight: 400;
+    width: 50%; 
+    padding :0  1rem;
+    font-size: 2rem;
+    -webkit-box-decoration-break:clone;
+    @include respond(sL)
+    {
+        font-size: 1.5rem;
+    }
+}

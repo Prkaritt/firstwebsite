@@ -1,0 +1,64 @@
+.story{
+    
+    &-container{
+        margin:0 auto;
+        background-color: rgba($color-white,.6);
+        transform:skewX(-10deg);
+        padding:2rem;
+        padding-left:5rem;
+        //height:19rem;
+        width:75%;
+        border-radius: .5rem;
+
+        
+    }
+
+    &_shape{
+
+        width: 12rem;
+        height:12rem;
+        float:left;
+        clip-path: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        margin-right: 3rem;
+        transform:skewX(10deg);
+        position:relative;
+        transition:all.3s;
+        
+        
+    }
+    &-image{
+      
+        width: 100%;
+        transform: scale(1.1);
+        transition:all.3s;
+        backface-visibility: hidden;
+        
+    }
+
+    &_paragraph{
+        font-size: 1.7rem;
+        transform:skewX(10deg); 
+    }
+    &_caption{
+        font-size: 1.5rem;
+        color: $color-white;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,70%);
+        opacity:0;
+        transition:all.3s;
+    }
+    &-container:hover &-image
+    {
+        transform: scale(1);
+        
+    }
+    &-container:hover &_caption
+    {
+        opacity:1;
+        transform:translate(-50%,-50%);
+    }
+
+}

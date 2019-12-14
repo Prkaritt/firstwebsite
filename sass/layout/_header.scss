@@ -1,0 +1,29 @@
+.header{
+    height:95vh;
+    background-image: linear-gradient(rgba($color_green,0.7),rgba($color_red, 0.7)),url(../img/planet.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0, 100% 90%,0% 100%);
+    position:relative;
+    min-width: 50rem;
+
+    &__logoBox{
+        position:absolute;
+        left:20px;
+        top:20px;
+    }
+    &__logo{
+        height:35px;
+    }
+    
+    &__box{
+        position:absolute;
+        top:40%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align: center;
+        backface-visibility: hidden;
+    }
+    
+    
+}

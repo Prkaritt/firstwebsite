@@ -1,0 +1,115 @@
+.form{
+
+    @include respond(land)
+    {
+        
+    }
+    &-group{
+
+        &:not(:last-child)
+        {
+            margin-bottom: 5rem;
+        }
+        
+        
+    }
+
+    &_input{
+
+        font-size: 1.5rem;
+        color: $color_grey;
+        border: none;
+        border-bottom:0.5rem solid transparent;
+        border-radius: 2px;
+        padding:1rem 0rem;
+        display:block;
+        width: 75%;
+        transition: all.3s;
+
+
+        &:focus{
+            outline: none;
+            border-bottom: .5rem solid $color_orange-dark;
+        }
+
+        &:valid{
+            border-bottom:.5rem solid $color_green-dark;
+        }
+
+        
+
+    }
+    &_input:placeholder-shown  + &_label{
+        opacity:0;
+        transform: translateY(-4rem);
+        
+
+    }
+
+    &_label{
+        color:white;
+        font-size: 1.5rem;
+        display:block;
+        transform: translateY(0);
+        opacity:1;
+        transition:all.3s;
+        position:relative;
+    }
+    &_radio-group{
+        display:inline-block;
+        width:49%;
+    }
+
+    &_radio_label{
+        font-size: 1.5rem;
+        display: inline-block;
+        background-image: linear-gradient(rgba($color_blue-light,1),rgba($color_blue-dark,1));
+        -webkit-background-clip: text;
+        color: transparent;
+        padding-left: 2rem;
+        position:relative;
+    }
+    &_rButton{
+        position:relative;
+        visibility:hidden;
+
+        
+    }
+    &_rButton:checked + &_radio_label &_radioButton::after
+    {
+        opacity:1;
+    }
+    &_radioButton{
+        height:3rem;
+        width:3rem;
+        display:inline-block;
+        border:3px solid green;
+        border-radius: 50%;
+        position:absolute;
+        top:-.3rem;
+        left:-2.4rem;
+    
+        &::after{
+            content:"";
+            display:inline-block;
+            width:2rem;
+            height:2rem;
+            border-radius:50%;
+            background-color: green;
+            position:absolute;
+            top:1.6px;
+            left:1.5px;
+            opacity:0;
+            transition: opacity .3s;
+        }
+    }
+
+    
+
+}
+
+
+    
+
+
+
